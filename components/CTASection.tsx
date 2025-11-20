@@ -1,3 +1,5 @@
+'use client';
+
 import { ArrowRight, Sparkles, Users, Target } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
@@ -61,7 +63,7 @@ export function CTASection() {
                 Create Your Account
                 <ArrowRight className="w-4 h-4" />
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" onClick={() => window.open("https://www.embark.ca/")}>
                 Learn More About Embark
               </Button>
             </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import { ArrowRight, GraduationCap, Globe, Users, Search } from "lucide-react";
 import { Button } from "./ui/button";
 
@@ -15,11 +17,11 @@ export function HeroSection() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="flex items-center gap-2">
+              <Button size="lg" className="flex items-center gap-2" onClick={() => document.getElementById("universityGrid")?.scrollIntoView({behavior: "smooth"})}>
                 Browse Universities
                 <ArrowRight className="w-4 h-4" />
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" onClick={() => window.open("https://www.embark.ca/")}>
                 How Embark Works
               </Button>
             </div>

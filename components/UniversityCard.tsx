@@ -5,22 +5,9 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
+import { UniversityData } from "@/data/universities";
 
-interface UniversityData {
-  id: string;
-  name: string;
-  location: string;
-  image: string;
-  ranking: number;
-  studentCount: number;
-  clubCount: number;
-  courseCount: number;
-  residenceCount: number;
-  researchCount: number;
-  rating: number;
-  description: string;
-  tags: string[];
-}
+
 
 interface UniversityCardProps {
   university: UniversityData;
@@ -30,7 +17,7 @@ export function UniversityCard({ university }: UniversityCardProps) {
   const router = useRouter();
 
   return (
-    <Card className="group hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden transform hover:-translate-y-1" onClick={() => router.push(`/universities/${university.id}`)}>
+    <Card className="group hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden transform hover:-translate-y-1 p-0" onClick={() => router.push(`/universities/${university.id}`)}>
       <div className="relative h-48 overflow-hidden rounded-t-xl">
         <img 
           src={university.image} 
@@ -122,5 +109,3 @@ export function UniversityCard({ university }: UniversityCardProps) {
     </Card>
   );
 }
-
-export type { UniversityData };

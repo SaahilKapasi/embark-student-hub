@@ -18,7 +18,7 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <div className="shrink-0 cursor-pointer" onClick={() => router.push("/")}>
-              <h1 className="text-2xl font-bold text-primary">Embark</h1>
+              <h1 className="text-2xl font-bold text-primary">Embark's</h1>
               <p className="text-xs text-muted-foreground">Student Hub</p>
             </div>
           </div>
