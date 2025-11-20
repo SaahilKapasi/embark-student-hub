@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <HeroSection />
-      <UniversityGrid />
+      <div id="universityGrid">
+        <UniversityGrid />
+      </div>
       <CTASection />
     </div>
   );
